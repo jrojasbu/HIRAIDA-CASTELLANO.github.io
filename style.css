@@ -124,18 +124,18 @@ nav .container {
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .logo-static {
-    height: 70px;
+    height: 80px;
     width: auto;
     border-radius: 8px;
     transition: var(--transition);
 }
 
 .logo-animated {
-    height: 75px;
+    height: 80px;
     width: auto;
     border-radius: 8px;
     display: none;
@@ -180,7 +180,7 @@ nav .container {
     display: flex;
     align-items: center;
     background: radial-gradient(circle at 70% 30%, #111111 0%, #000000 100%);
-    padding-top: 80px;
+    padding-top: 120px;
 }
 
 .hero-grid {
