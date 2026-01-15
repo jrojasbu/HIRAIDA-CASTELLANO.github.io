@@ -406,6 +406,9 @@ nav .container {
 
 /* Responsive */
 @media (max-width: 992px) {
+    .section-title::after {
+        width: 100px;
+    }
 
     .hero-grid,
     .about-grid {
@@ -419,10 +422,65 @@ nav .container {
 
     .hero-image {
         max-width: 400px;
-        margin: 0 auto;
+        margin: 30px auto 0;
+    }
+
+    .hero-image::before {
+        left: 10px;
+        top: 10px;
     }
 
     .nav-links {
         display: none;
+    }
+
+    .hero {
+        height: auto;
+        padding-top: 140px;
+        padding-bottom: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-static {
+        height: 50px;
+    }
+
+    .logo-animated {
+        height: 50px;
+    }
+
+    nav {
+        height: 70px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .hero-image {
+        max-width: 280px;
+    }
+
+    .hero-image::before {
+        left: 5px;
+        top: 5px;
+    }
+
+    .btn-cta {
+        padding: 8px 14px;
+        font-size: 0.75rem;
+    }
+
+    .container {
+        padding: 0 15px;
     }
 }
