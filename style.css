@@ -122,10 +122,28 @@ nav .container {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--accent-gold);
-    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-static {
+    height: 45px;
+    width: auto;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.logo-animated {
+    height: 50px;
+    width: auto;
+    border-radius: 8px;
+    display: none;
+    /* Hidden by default, can be toggled via JS or shown on hover */
+}
+
+.logo:hover .logo-static {
+    transform: scale(1.05);
 }
 
 .nav-links {

@@ -21,7 +21,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const targetId = this.getAttribute('href');
         if (targetId === '#') return;
-        
+
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
             window.scrollTo({
@@ -31,3 +31,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Logo animation on hover
+const logoContainer = document.querySelector('.logo');
+const logoStatic = document.getElementById('logo-static');
+const logoAnimated = document.getElementById('logo-animated');
+
+if (logoContainer && logoStatic && logoAnimated) {
+    logoContainer.addEventListener('mouseenter', () => {
+        logoStatic.style.display = 'none';
+        logoAnimated.style.display = 'block';
+        logoAnimated.play();
+    });
+
+    logoContainer.addEventListener('mouseleave', () => {
+        logoStatic.style.display = 'block';
+        logoAnimated.style.display = 'none';
+        logoAnimated.pause();
+        logoAnimated.currentTime = 0;
+    });
+}
