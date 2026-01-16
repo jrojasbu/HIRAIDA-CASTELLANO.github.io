@@ -90,6 +90,15 @@ section {
     gap: 15px;
 }
 
+.section-title.centered {
+    justify-content: center;
+    text-align: center;
+}
+
+.section-title.centered::after {
+    display: none;
+}
+
 .section-title::after {
     content: '';
     display: block;
@@ -480,6 +489,14 @@ nav .container {
     margin-bottom: 50px;
 }
 
+.contact-email {
+    display: inline-block;
+    max-width: 100%;
+    word-break: break-all;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     .section-title::after {
@@ -554,6 +571,16 @@ nav .container {
     .btn-cta {
         padding: 8px 14px;
         font-size: 0.75rem;
+    }
+
+    .contact-email {
+        padding: 12px 20px !important;
+        font-size: 0.85rem !important;
+    }
+
+    .section-title.centered {
+        font-size: 1.8rem;
+        justify-content: center;
     }
 
     .container {
