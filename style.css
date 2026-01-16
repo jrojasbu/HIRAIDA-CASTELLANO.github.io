@@ -24,6 +24,10 @@ body {
     overflow-x: hidden;
 }
 
+p {
+    text-align: justify;
+}
+
 /* Animations */
 @keyframes fadeIn {
     from {
@@ -318,7 +322,18 @@ nav .container {
     color: var(--accent-gold);
 }
 
-/* Experience Cards */
+/* Experience & Certification Cards */
+#experiencia,
+#certificaciones {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+#experiencia .section-title,
+#certificaciones .section-title {
+    color: var(--primary-color);
+}
+
 .exp-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -326,27 +341,29 @@ nav .container {
 }
 
 .exp-card {
-    background-color: var(--secondary-color);
-    padding: 30px;
-    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 45px 35px;
+    border-radius: 30px;
     transition: var(--transition);
-    border: 1px solid transparent;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
 }
 
 .exp-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-15px);
     border: 1px solid var(--accent-gold);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.25);
 }
 
 .exp-card h3 {
     margin-bottom: 10px;
-    color: var(--white);
+    color: var(--primary-color);
 }
 
 .exp-card .company {
     color: var(--accent-gold);
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     display: block;
 }
 
@@ -359,10 +376,20 @@ nav .container {
 
 .exp-card p {
     font-size: 0.95rem;
-    color: var(--text-secondary);
+    color: #495057;
 }
 
 /* Skills Grid */
+#habilidades {
+    background-color: var(--white);
+    color: var(--primary-color);
+    padding: 100px 0;
+}
+
+#habilidades .section-title {
+    color: var(--primary-color);
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -370,21 +397,70 @@ nav .container {
 }
 
 .skill-box {
-    background: var(--glass-bg);
-    padding: 30px;
-    border-radius: 10px;
+    background: #ffffff;
+    padding: 45px 35px;
+    border-radius: 30px;
     text-align: center;
     transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
 }
 
 .skill-box:hover {
-    background: var(--secondary-color);
+    background: var(--white);
+    transform: translateY(-15px);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.25);
+    border-color: var(--accent-gold);
 }
 
 .skill-box i {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--accent-gold);
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+.skill-box h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.skill-box p {
+    color: #495057;
+}
+
+.contact-icon {
+    color: var(--text-primary);
+    transition: var(--transition);
+}
+
+.contact-icon:hover {
+    color: var(--accent-gold);
+    transform: translateY(-5px);
+}
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #128c7e;
+    box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Contact */
