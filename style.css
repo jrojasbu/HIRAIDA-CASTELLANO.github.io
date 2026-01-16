@@ -140,6 +140,14 @@ nav .container {
     gap: 20px;
 }
 
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--accent-gold);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
 .logo-static {
     height: 80px;
     width: auto;
@@ -523,8 +531,46 @@ nav .container {
         top: 10px;
     }
 
+    .menu-toggle {
+        display: block;
+        order: 2;
+    }
+
     .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(10, 10, 10, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 40px 0;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.4s ease;
+        opacity: 0;
+        pointer-events: none;
+        border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+    }
+
+    .nav-links.active {
+        height: auto;
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .navbar-cta {
         display: none;
+    }
+
+    .btn-cta {
+        order: 3;
     }
 
     .hero {
